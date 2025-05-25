@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AppProvider } from './context/AppContext';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
+import ApiTest from './components/ApiTest';
 
 // Layout
 import TabBar from './components/layout/TabBar';
@@ -45,6 +46,7 @@ const App: React.FC = () => {
           <div className="app-container pb-16 min-h-screen bg-gray-50">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/api-test" element={<ApiTest />} />
               <Route path="/games" element={<GamesPage />} />
               <Route path="/games/magic-ball" element={<MagicBall />} />
               <Route path="/games/tarot-card" element={<TarotCard />} />
